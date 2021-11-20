@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Work+Sans:500|Fira+Sans|Pangolin|Ubuntu');
+
+html{
+    height: 100px;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    transition: all ease 999s;
+    animation: 30s bgcolor infinite linear;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+ main {
+    flex: 1 0 auto;
+  }
+
+/*ШРИФТЫ*/
+.brand-logo{
+    font-family: 'Bree Serif', serif;
+}
+
+.brand-logo{
+    animation: 30s nav-color-change infinite;
+}
+
+.brand-logo-font{
+    font-family: 'Bree Serif', serif;
+}
+
+.brand-logo-font-2{
+    font-family: 'Pangolin', cursive;
+}
+
+p{
+	text-align:center;
+	margin-top:18px;
+    font-family: 'Ubuntu', serif;
+}
+
+.m0{
+    margin: 0 auto!important;
+}
+.pt0{
+    padding-top:0!important;
+}
+
+.lead-m{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.jumbotron{
+    font-family: 'Bree Serif', serif;
+    height:300px;
+    text-align: center;
+}
+
+.br{
+    border-radius: 30px;
+}
+
+.pt{
+    padding-top: 10px;
+}
+
+h1{
+    text-align:center;
+    font-family: 'Bree Serif', serif;
+}
+
+/*ШРИФТы*/
+
+/*Анимированный фон*/
+@keyframes bgcolor{
+    0%
+    {
+        background:#00a8ff;
+    }
+
+    20%
+    {
+        background:#9c88ff
+    }
+
+    40%
+    {
+        background:#fbc531
+    }
+
+    60%
+    {
+        background: #0be881;
+    }
+
+    80%
+    {
+        background:#487eb0;
+    }
+
+    90%
+    {
+        background: #e84118;
+    }
+    100%
+    {
+        background:#00a8ff;
+    }
+
+}
+
+@keyframes nav-color-change{
+    0%
+    {
+        color:#00a8ff;
+    }
+
+    20%
+    {
+        color:#9c88ff
+    }
+
+    40%
+    {
+        color:#fbc531
+    }
+
+    60%
+    {
+        color: #0be881;
+    }
+
+    80%
+    {
+        color:#487eb0;
+    }
+
+    90%
+    {
+        color: #e84118;
+    }
+    100%
+    {
+        color:#00a8ff;
+    }
+
+}
+/*Анимированный фон*/
+
+/*Подчеркивания*/
+a {
+    display: inline-block;
+    color:black;
+    line-height: 1;
+    text-decoration:none;
+    cursor: pointer;
+    position:relative;
+    font-size:19px;
+    font-weight: 600;
+}
+
+a:after {
+    background-color:black;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    left:50%;
+    position:absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    transform:translateX(-50%);
+    padding-top:1px;
+}
+
+a:hover:after,
+a:focus:after {
+    width: 100%;
+}
+
+a:hover{
+    color:gray;
+}
+
+.ss{
+    animation: 4s spin1 infinite linear;
+}
+/*Подчеркивания*/
+
+/*Крутящяяся иконка*/
+@keyframes spin1{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+       transform: rotate(360deg);
+    }
+}
+/*Крутящяяся иконка*/
+
+/*typed js*/
+.typed-cursor{
+    opacity: 1;
+    height:30px;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+/*typed js*/
+
+
+/*Прелоадер*/
+.preloader{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background: black;
+	z-index:999;
+	transition:1s all;
+	opacity:1;
+	visibility: visible;
+}
+.loader{
+    font-size: 80px;
+	top:38%;
+	left:48%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+    animation: 2s spin;
+    color:red;
+}
+.loader1{
+    font-size: 60px;
+	top:53%;
+	left:50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+    animation: 2s spinwine;
+    color:white;
+}
+.done{
+	opacity: 0;
+	visibility: hidden;
+}
+	
+@keyframes spin{
+	from{
+        transform: translate(-50%, -50%) rotate(0deg);
+	}
+	
+	to{
+        transform: translate(-50%, -50%) rotate(90deg);
+        color:white;
+
+	}
+}
+
+@keyframes spinwine{
+	from{
+        transform: translate(-50%, -50%) rotate(0deg);
+	}
+	
+	to{
+        transform: translate(-50%, -50%) rotate(0deg);
+        color:red;
+    }
+}
+
+/*Конец прелоадера*/
+
+/*Мобильность*/
+@media screen and (max-width: 600px) {
+ .brand-logo-font{
+ 	font-size:35px;
+ }
+ .pp{
+ 	font-size:18px!important;
+ }
+ .instruktion{
+ 	font-size:19px!important;
+ 	margin-bottom:10px;
+ }
+ .brand-logo-font-2{
+ 	margin-right:5px!important;
+ }
+ 
+ .small{
+  margin-bottom:45px;
+ }
+}
+
+
+
+
+
+
+
